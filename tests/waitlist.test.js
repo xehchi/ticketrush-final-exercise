@@ -1,7 +1,12 @@
 const { joinWaitlist } = require('../js/waitlist');
 
+// השוואת מערכים לפי תוכן (assertEq משווה לפי זהות אובייקט)
+function assertList(actual, expected) {
+  assertEq(JSON.stringify(actual), JSON.stringify(expected));
+}
+
 test('adds a valid email', function () {
-  assertEq(joinWaitlist(['a@b.com'], '  Sara@Example.COM '), ['a@b.com', 'sara@example.com']);
+  assertList(joinWaitlist(['a@b.com'], '  Sara@Example.COM '), ['a@b.com', 'sara@example.com']);
 });
 test('does not mutate the original list', function () {
   const list = [];
@@ -9,11 +14,11 @@ test('does not mutate the original list', function () {
   assertEq(list.length, 0);
 });
 test('invalid: no @', function () {
-  assertEq(joinWaitlist(['a@b.com'], 'nope'), ['a@b.com']);
+  assertList(joinWaitlist(['a@b.com'], 'nope'), ['a@b.com']);
 });
 test('invalid: no dot after @', function () {
-  assertEq(joinWaitlist([], 'a@b'), []);
+  assertList(joinWaitlist([], 'a@b'), []);
 });
 test('duplicate is ignored', function () {
-  assertEq(joinWaitlist(['sara@example.com'], 'SARA@example.com'), ['sara@example.com']);
+  assertList(joinWaitlist(['sara@example.com'], 'SARA@example.com'), ['sara@example.com']);
 });
