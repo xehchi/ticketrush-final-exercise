@@ -1,0 +1,69 @@
+### git worktree list
+"D:/Users/User/Documents/\327\244\327\250\327\225\327\231\327\247\327\230 \327\221GIT \327\242\327\246\327\221\327\231\327\231\327\235/ticketrush"   2ab5b08 [main]
+"D:/Users/User/Documents/\327\244\327\250\327\225\327\231\327\247\327\230 \327\221GIT \327\242\327\246\327\221\327\231\327\231\327\235/early-access" 9d69b0c [feature/early-access]
+"D:/Users/User/Documents/\327\244\327\250\327\225\327\231\327\247\327\230 \327\221GIT \327\242\327\246\327\221\327\231\327\231\327\235/review"       95876f7 [review/noa-refund]
+"D:/Users/User/Documents/\327\244\327\250\327\225\327\231\327\247\327\230 \327\221GIT \327\242\327\246\327\221\327\231\327\231\327\235/waitlist"     2ab5b08 [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                9d69b0c (D:/Users/User/Documents/פרויקט בGIT עצביים/early-access) [origin/feature/early-access] merge: main security fix into early-access
++ feature/waitlist                    2ab5b08 (D:/Users/User/Documents/פרויקט בGIT עצביים/waitlist) merge: early-access into main
+  hotfix/price                        c733095 Revert "perf: faster price formatting"
+* main                                2ab5b08 [origin/main] merge: early-access into main
++ review/noa-refund                   95876f7 (D:/Users/User/Documents/פרויקט בGIT עצביים/review) [origin/review/noa-refund] review: noa/refund — calcRefund incorrectly refunds service fee
+  remotes/origin/HEAD                 -> origin/main
+  remotes/origin/dana/promo           f95f1ec test: add student discount tests
+  remotes/origin/feature/early-access 9d69b0c merge: main security fix into early-access
+  remotes/origin/feature/waitlist     2ab5b08 merge: early-access into main
+  remotes/origin/main                 2ab5b08 merge: early-access into main
+  remotes/origin/noa/refund           60bddbc test: refund tests
+  remotes/origin/review/noa-refund    95876f7 review: noa/refund — calcRefund incorrectly refunds service fee
+  remotes/origin/ruth/fixes           54d84dc wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+*   2ab5b08 (HEAD -> main, tag: v1.1, origin/main, origin/feature/waitlist, origin/HEAD, feature/waitlist) merge: early-access into main
+|\  
+| *   9d69b0c (origin/feature/early-access, feature/early-access) merge: main security fix into early-access
+| |\  
+| * | 9102425 test: align member quota tests with 6-ticket limit
+| * | 0deb08c chore: raise member quota from 4 to 6 tickets
+| * |   2038db0 merge: dana/promo into early-access with member+student pricing
+| |\ \  
+| | * | f95f1ec (origin/dana/promo) test: add student discount tests
+| | * | 2d65502 feat: student discount (15%)
+| * | | c0b2007 feat: member early-access pricing and 4-ticket quota
+* | | |   954b01a merge: main fixes into waitlist
+|\ \ \ \  
+| | |_|/  
+| |/| |   
+| * | | 101ad75 security: untrack config.js with payment key, add config.example.js
+| * | | 5cea211 fix: correct concert date in events.js
+| | |/  
+| |/|   
+* | | d0ff26a test: compare waitlist results by content
+* | | da4e590 feat: waitlist signup with email validation
+|/ /  
+| | * 95876f7 (origin/review/noa-refund, review/noa-refund) review: noa/refund — calcRefund incorrectly refunds service fee
+| | * 60bddbc (origin/noa/refund) test: refund tests
+| | * 6d31717 feat: refund calculation for cancelled orders
+| |/  
+|/|   
+| | * 54d84dc (origin/ruth/fixes) wip: try new fonts
+| | * 4b43032 debug: dump state to console
+| | * 9b3cf78 WIP: try removing ticket limits
+| | * c2233df fix: correct concert date in events.js
+| | * 62cd620 WIP: new checkout flow (do not merge)
+| |/  
+|/|   
+* | c733095 (hotfix/price) Revert "perf: faster price formatting"
+|/  
+* 6e5b25d feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
