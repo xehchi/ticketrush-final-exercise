@@ -2,7 +2,7 @@
 const TICKET_PRICE = 350;       // ₪ לכרטיס
 const SERVICE_FEE = 12;         // ₪ עמלת שירות לכל כרטיס
 const MAX_TICKETS = 8;          // מקסימום כרטיסים להזמנה – לקוחה רגילה
-const MAX_TICKETS_MEMBER = 4;   // מקסימום כרטיסים להזמנה – חברת מועדון
+const MAX_TICKETS_MEMBER = 6;   // מקסימום כרטיסים להזמנה – חברת מועדון
 const MEMBER_DISCOUNT = 0.2;    // 20% הנחה – חברת מועדון
 const STUDENT_DISCOUNT = 0.15;  // 15% הנחה – סטודנטית
 

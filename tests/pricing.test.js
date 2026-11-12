@@ -7,3 +7,4 @@ test('members may buy up to 4', function () { assertEq(maxTickets(true), 4); });
 test('member over quota is invalid', function () { assertEq(calcTotal(5, true), null); });
 test('zero tickets is invalid', function () { assertEq(calcTotal(0), null); });
 test('regular over quota is invalid', function () { assertEq(calcTotal(9), null); });
+test('members may buy up to 6', function () { assertEq(maxTickets(true), 6); });
